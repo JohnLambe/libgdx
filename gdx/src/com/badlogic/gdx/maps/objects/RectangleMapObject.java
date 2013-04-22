@@ -8,6 +8,7 @@ import com.badlogic.gdx.math.Rectangle;
  */
 public class RectangleMapObject extends MapObject {
 	
+	/** @see #getRectangle() */
 	private Rectangle rectangle;
 	
 	/**
@@ -15,6 +16,14 @@ public class RectangleMapObject extends MapObject {
 	 */
 	public Rectangle getRectangle() {
 		return rectangle;
+	}
+	
+	/**
+	 * @see #getRectangle()
+	 * @param rectangle the new rectangle
+	 */
+	public void setRectangle(Rectangle rectangle) {
+		this.rectangle = rectangle;
 	}
 	
 	/**

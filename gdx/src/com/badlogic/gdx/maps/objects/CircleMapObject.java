@@ -7,7 +7,8 @@ import com.badlogic.gdx.math.Circle;
  * @brief represents circle shaped map objects
  */
 public class CircleMapObject extends MapObject {
-	
+
+	/** @see #getCircle() */
 	private Circle circle;
 	
 	/**
@@ -15,6 +16,14 @@ public class CircleMapObject extends MapObject {
 	 */
 	public Circle getCircle() {
 		return circle;
+	}
+
+	/**
+	 * @see #getCircle()
+	 * @param circle the new circle
+	 */
+	public void setCircle(Circle circle) {
+		this.circle = circle;
 	}
 	
 	/**

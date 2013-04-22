@@ -6,6 +6,7 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class EllipseMapObject extends MapObject {
 
+	/** @see #getEllipse() */
 	private Ellipse ellipse;
 	
 	/**
@@ -13,6 +14,14 @@ public class EllipseMapObject extends MapObject {
 	 */
 	public Ellipse getEllipse() {
 		return ellipse;
+	}
+	
+	/**
+	 * @see #getEllipse()
+	 * @param ellipse the new ellipse
+	 */
+	public void setEllipse(Ellipse ellipse) {
+		this.ellipse = ellipse;
 	}
 	
 	/**
