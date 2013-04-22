@@ -16,7 +16,7 @@ public class TiledMapTileLayer extends MapLayer {
 	private Cell[][] cells;
 	
 	/**
-	 * @return layer's witdth in tiles
+	 * @return layer's width in tiles
 	 */
 	public int getWidth() {
 		return width;
@@ -61,8 +61,10 @@ public class TiledMapTileLayer extends MapLayer {
 	}
 	
 	/**
-	 * @param x
-	 * @param y 
+     * Gets the {@link Cell} at the given coordinates.
+     * Returns null if the cell is outside the bounds of the map.
+	 * @param x 0-based X coordinate of the cell in the map.
+	 * @param y 0-based Y coordinate of the cell in the map.
 	 * @return cell at (x, y)
 	 */
 	public Cell getCell(int x, int y) {
@@ -73,8 +75,9 @@ public class TiledMapTileLayer extends MapLayer {
 	
 	/**
 	 * Sets the {@link Cell} at the given coordinates.
-	 * @param x
-	 * @param y
+	 * Does nothing if the cell is outside the bounds of the map.
+     * @param x 0-based X coordinate of the cell in the map.
+     * @param y 0-based Y coordinate of the cell in the map.
 	 * @param cell
 	 */
 	public void setCell(int x, int y, Cell cell) {
