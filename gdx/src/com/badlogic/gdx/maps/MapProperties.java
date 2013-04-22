@@ -103,5 +103,27 @@ public class MapProperties {
 	public Iterator<Object> getValues() {
 		return properties.values();
 	}
+	
+	/** 
+	 * Gets a value from the map as a float.
+	 * @param key the key of the object to return from the map.
+	 * @param defaultValue value to be returned if the requested key does not exist
+	 *        or its value is not a float.
+	 * @return the value corresponding to the requested key, or the default value.
+	 */
+	public float getFloat(String key, float defaultValue) {
+		Object value = get(key);                         // get the value as an Object
+		if(value==null) {                                // if the key does not exist
+			return defaultValue;                         // return the default value
+		}
+		if(value instanceof Float)                       // if it's a Float already
+			return ((Float)value).floatValue();          // return its float value
+		try {                                            // otherwise,
+			return Float.parseFloat(value.toString());   // parse its string value as a float 
+		}
+		catch(NumberFormatException e) {                 // if not valid as a float
+			return defaultValue;                         // return the default value
+		}
+	}
 
 }
