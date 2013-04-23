@@ -7,11 +7,8 @@ import com.badlogic.gdx.math.MathUtils;
 /**
  * @brief Represents a map object containing a texture (region).
  * 
- * Uses of this include Tile map objects (objects placed with the 'Insert Tile' tool in Tiled),
- * and textures in a non-tiled map.
- * 
- * @see See the comments on {@link com.badlogic.gdx.maps.tiled.TmxMapLoader}
- *      for what properties it populates on this object.
+ * Uses of this include (but are not limited to) movable items placed
+ * in addition to a tiled map, and textures in a non-tiled map.
  */
 public class TextureMapObject extends MapObject {
 	/** (Not available)
